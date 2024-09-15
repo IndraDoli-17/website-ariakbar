@@ -1,4 +1,94 @@
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Tangani klik pada tombol "Lihat Portfolio Saya"
+  document.querySelector('.btn-primary').addEventListener('click', function() {
+      var icon = document.querySelector('.fa-solid.fa-backward');
+      if (icon) {
+          icon.setAttribute('id', 'test');
+      }
+
+      var navbar = document.querySelector('.baris1');
+      if (navbar) {
+        navbar.setAttribute('class', '.show-baris1');
+      }
+      if (window.innerWidth <= 992) {
+        // Tambahkan kelas "perkecil" pada elemen h1
+        var h1Element = document.querySelector('#header .container');
+        if (h1Element) {
+            h1Element.setAttribute('id', 'flex-row');
+        }
+    }
+
+    if (window.innerWidth <= 768) {
+      // Tambahkan kelas "perkecil" pada elemen h1
+      var nama = document.querySelector('.container span');
+      if (nama) {
+          nama.setAttribute('class', 'nama');
+      }
+  }
+
+
+
+
+  });
+
+  document.querySelector('#header #navbar ul').addEventListener('click', function() {
+    var icon = document.querySelector('.fa-solid.fa-backward');
+      if (icon) {
+          icon.setAttribute('id', 'test');
+      }
+
+  });
+
+  // Tangani klik pada link "index.html"
+  document.querySelector('h1 a[href="index.html"]').addEventListener('click', function() {
+      var icon = document.querySelector('fa-solid.fa-backward');
+      if (icon) {
+          icon.removeAttribute('id', 'test');
+      }
+
+      var navbar = document.querySelector('.baris1');
+      if (navbar) {
+        navbar.removeAttribute('class', '.show-baris1');
+      }
+
+      var flexrow = document.querySelector('.container#flex-row');
+      if (flexrow) {
+        flexrow.removeAttribute('id', 'flex-row');
+      }
+
+      if (window.innerWidth <= 768) {
+        // Tambahkan kelas "perkecil" pada elemen h1
+        var nama = document.querySelector('.container span.nama');
+        if (nama) {
+            nama.removeAttribute('class', 'nama');
+        }
+    }
+
+     
+
+
+  });
+});
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   // Menambahkan event listener pada tombol "Lihat Portfolio Saya"
+  
+//       // Periksa apakah lebar layar minimal 1024px
+//       if (window.innerWidth <= 992) {
+//           // Tambahkan kelas "perkecil" pada elemen h1
+//           var h1Element = document.querySelector('#header .container');
+//           if (h1Element) {
+//               h1Element.setAttribute('id', 'flex-row');
+//           }
+//       }
+  
+// });
+
+
+
+
 
 (function() {
   "use strict";
